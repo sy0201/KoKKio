@@ -39,6 +39,8 @@ final class HeaderCollectionReusableView: UICollectionReusableView, ReuseIdentif
     }
 }
 
+// MARK: - Setup UI
+
 extension HeaderCollectionReusableView {
     func setupUI() {
         addSubview(segmentControl)

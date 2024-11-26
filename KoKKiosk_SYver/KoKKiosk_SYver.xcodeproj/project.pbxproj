@@ -17,6 +17,7 @@
 		18E39F3E2CF56CD400EA4357 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F3D2CF56CD400EA4357 /* HeaderCollectionReusableView.swift */; };
 		18E39F402CF56DED00EA4357 /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F3F2CF56DED00EA4357 /* ReuseIdentifying.swift */; };
 		18E39F422CF5960E00EA4357 /* ChickenMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F412CF5960E00EA4357 /* ChickenMenuCollectionViewCell.swift */; };
+		18E39F442CF59DD100EA4357 /* ChickenInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F432CF59DD100EA4357 /* ChickenInfoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		18E39F3D2CF56CD400EA4357 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		18E39F3F2CF56DED00EA4357 /* ReuseIdentifying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifying.swift; sourceTree = "<group>"; };
 		18E39F412CF5960E00EA4357 /* ChickenMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenMenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		18E39F432CF59DD100EA4357 /* ChickenInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				18E39F3D2CF56CD400EA4357 /* HeaderCollectionReusableView.swift */,
 				18E39F412CF5960E00EA4357 /* ChickenMenuCollectionViewCell.swift */,
+				18E39F432CF59DD100EA4357 /* ChickenInfoCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				18E39F222CF564BE00EA4357 /* AppDelegate.swift in Sources */,
 				18E39F3E2CF56CD400EA4357 /* HeaderCollectionReusableView.swift in Sources */,
 				18E39F242CF564BE00EA4357 /* SceneDelegate.swift in Sources */,
+				18E39F442CF59DD100EA4357 /* ChickenInfoCollectionViewCell.swift in Sources */,
 				18E39F422CF5960E00EA4357 /* ChickenMenuCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

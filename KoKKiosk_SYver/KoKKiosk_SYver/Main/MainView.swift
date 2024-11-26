@@ -14,7 +14,6 @@ final class MainView: UIView {
         layout.scrollDirection = .vertical
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .red
         return collectionView
     }()
     

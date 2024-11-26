@@ -31,6 +31,8 @@ final class ViewController: UIViewController {
     }
 }
 
+// MARK: - CollectionView Method
+
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         1
