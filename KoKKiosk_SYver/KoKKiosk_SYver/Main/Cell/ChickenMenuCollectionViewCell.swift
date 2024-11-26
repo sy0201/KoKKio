@@ -13,9 +13,10 @@ final class ChickenMenuCollectionViewCell: UICollectionViewCell, ReuseIdentifyin
         layout.scrollDirection = .horizontal
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .red
+        //collectionView.backgroundColor = .red
         return collectionView
     }()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,13 +28,25 @@ final class ChickenMenuCollectionViewCell: UICollectionViewCell, ReuseIdentifyin
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func updateMenuTypeCollectionView(menuType: Enum.MenuType) {
+        // 실 데이터를 받아와서 뷰 업데이트
+        switch menuType {
+        case .honeyChicken:
+            collectionView.backgroundColor = .yellow
+        case .redChicken:
+            collectionView.backgroundColor = .red
+        case .drink:
+            collectionView.backgroundColor = .blue
+        }
+    }
 }
 
 // MARK: - Setup UI
 
 private extension ChickenMenuCollectionViewCell {
     func setupUI() {
-        collectionView.backgroundColor = .yellow
+        //collectionView.backgroundColor = .clear
         addSubview(collectionView)
     }
     
@@ -52,8 +65,6 @@ private extension ChickenMenuCollectionViewCell {
         // 셀 연결
         self.collectionView.register(ChickenInfoCollectionViewCell.self, forCellWithReuseIdentifier: ChickenInfoCollectionViewCell.reuseIdentifier)
     }
-    
-    
 }
 
 // MARK: - CollectionView Method

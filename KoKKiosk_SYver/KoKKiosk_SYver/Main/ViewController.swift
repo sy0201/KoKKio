@@ -9,7 +9,9 @@ import UIKit
 
 final class ViewController: UIViewController {
     let mainView = MainView()
-
+    var currentMenuType: Enum.MenuType = .honeyChicken
+    
+    
     override func loadView() {
         view = mainView
     }
@@ -42,6 +44,11 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderCollectionReusableView.reuseIdentifier, for: indexPath) as? HeaderCollectionReusableView else {
             return UICollectionReusableView()
         }
+        // ChickenMenuCollectionViewCell menuType 전달받은 후 뷰 업데이트
+        header.onSegmentChanged = { [weak self] menuType in
+            self?.currentMenuType = menuType
+            self?.mainView.collectionView.reloadData()
+        }
         
         return header
     }
@@ -55,6 +62,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
             return UICollectionViewCell()
         }
         
+        cell.updateMenuTypeCollectionView(menuType: currentMenuType)
         return cell
     }
     

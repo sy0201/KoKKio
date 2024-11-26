@@ -26,12 +26,14 @@ final class HeaderCollectionReusableView: UICollectionReusableView, ReuseIdentif
         return segment
     }()
     
+    var onSegmentChanged: ((Enum.MenuType) -> Void)?
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
         setupConstraint()
-        segmentControl.addTarget(self, action: #selector(didChangeValue(_:)), for: .touchUpInside)
+        segmentControl.addTarget(self, action: #selector(didChangeValue(_:)), for: .valueChanged)
     }
     
     required init?(coder: NSCoder) {
@@ -58,10 +60,13 @@ extension HeaderCollectionReusableView {
         switch sender.selectedSegmentIndex {
         case 0:
             print("허니 선택됨")
+            onSegmentChanged?(.honeyChicken)
         case 1:
             print("레드 선택됨")
+            onSegmentChanged?(.redChicken)
         case 2:
             print("주류 선택됨")
+            onSegmentChanged?(.drink)
         default:
             break
         }
