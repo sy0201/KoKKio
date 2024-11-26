@@ -13,6 +13,10 @@
 		18E39F2B2CF564C000EA4357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E39F2A2CF564C000EA4357 /* Assets.xcassets */; };
 		18E39F2E2CF564C000EA4357 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 18E39F2D2CF564C000EA4357 /* Base */; };
 		18E39F382CF5679F00EA4357 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 18E39F372CF5679F00EA4357 /* SnapKit */; };
+		18E39F3B2CF56A0500EA4357 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F3A2CF56A0500EA4357 /* MainView.swift */; };
+		18E39F3E2CF56CD400EA4357 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F3D2CF56CD400EA4357 /* HeaderCollectionReusableView.swift */; };
+		18E39F402CF56DED00EA4357 /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F3F2CF56DED00EA4357 /* ReuseIdentifying.swift */; };
+		18E39F422CF5960E00EA4357 /* ChickenMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F412CF5960E00EA4357 /* ChickenMenuCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		18E39F2A2CF564C000EA4357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18E39F2D2CF564C000EA4357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18E39F2F2CF564C000EA4357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E39F3A2CF56A0500EA4357 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		18E39F3D2CF56CD400EA4357 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		18E39F3F2CF56DED00EA4357 /* ReuseIdentifying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifying.swift; sourceTree = "<group>"; };
+		18E39F412CF5960E00EA4357 /* ChickenMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +66,32 @@
 			children = (
 				18E39F212CF564BE00EA4357 /* AppDelegate.swift */,
 				18E39F232CF564BE00EA4357 /* SceneDelegate.swift */,
-				18E39F252CF564BE00EA4357 /* ViewController.swift */,
+				18E39F3F2CF56DED00EA4357 /* ReuseIdentifying.swift */,
+				18E39F392CF567D800EA4357 /* Main */,
 				18E39F2A2CF564C000EA4357 /* Assets.xcassets */,
 				18E39F2C2CF564C000EA4357 /* LaunchScreen.storyboard */,
 				18E39F2F2CF564C000EA4357 /* Info.plist */,
 			);
 			path = KoKKiosk_SYver;
+			sourceTree = "<group>";
+		};
+		18E39F392CF567D800EA4357 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				18E39F3C2CF56BBA00EA4357 /* Cell */,
+				18E39F3A2CF56A0500EA4357 /* MainView.swift */,
+				18E39F252CF564BE00EA4357 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		18E39F3C2CF56BBA00EA4357 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18E39F3D2CF56CD400EA4357 /* HeaderCollectionReusableView.swift */,
+				18E39F412CF5960E00EA4357 /* ChickenMenuCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +171,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E39F262CF564BE00EA4357 /* ViewController.swift in Sources */,
+				18E39F402CF56DED00EA4357 /* ReuseIdentifying.swift in Sources */,
+				18E39F3B2CF56A0500EA4357 /* MainView.swift in Sources */,
 				18E39F222CF564BE00EA4357 /* AppDelegate.swift in Sources */,
+				18E39F3E2CF56CD400EA4357 /* HeaderCollectionReusableView.swift in Sources */,
 				18E39F242CF564BE00EA4357 /* SceneDelegate.swift in Sources */,
+				18E39F422CF5960E00EA4357 /* ChickenMenuCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
