@@ -32,6 +32,9 @@ final class ViewController: UIViewController {
         mainView.collectionView.register(ChickenMenuCollectionViewCell.self, forCellWithReuseIdentifier: ChickenMenuCollectionViewCell.reuseIdentifier)
         mainView.collectionView.register(ShoppingBasketCollectionViewCell.self, forCellWithReuseIdentifier: ShoppingBasketCollectionViewCell.reuseIdentifier)
         mainView.collectionView.register(totalOrderCollectionViewCell.self, forCellWithReuseIdentifier: totalOrderCollectionViewCell.reuseIdentifier)
+        
+        // 푸터뷰 연결
+        mainView.collectionView.register(FooterCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionReusableView.reuseIdentifier)
     }
 }
 
@@ -43,16 +46,27 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderCollectionReusableView.reuseIdentifier, for: indexPath) as? HeaderCollectionReusableView else {
-            return UICollectionReusableView()
+        if kind == UICollectionView.elementKindSectionHeader {
+            // Header뷰 구현
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderCollectionReusableView.reuseIdentifier, for: indexPath) as? HeaderCollectionReusableView else {
+                return UICollectionReusableView()
+            }
+            // ChickenMenuCollectionViewCell menuType 전달받은 후 뷰 업데이트
+            header.onSegmentChanged = { [weak self] menuType in
+                self?.currentMenuType = menuType
+                self?.mainView.collectionView.reloadData()
+            }
+            
+            return header
+            
+            // Footer뷰 구현
+        } else {
+            guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FooterCollectionReusableView.reuseIdentifier, for: indexPath) as? FooterCollectionReusableView else {
+                return UICollectionReusableView()
+            }
+
+            return footer
         }
-        // ChickenMenuCollectionViewCell menuType 전달받은 후 뷰 업데이트
-        header.onSegmentChanged = { [weak self] menuType in
-            self?.currentMenuType = menuType
-            self?.mainView.collectionView.reloadData()
-        }
-        
-        return header
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -102,5 +116,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         default:
             return CGSize(width: UIScreen.main.bounds.width, height: 100)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: view.bounds.width, height: 60)
     }
 }
