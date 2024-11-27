@@ -97,7 +97,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
             return CGSize(width: UIScreen.main.bounds.width, height: 200)
             
         case 2:
-            return CGSize(width: UIScreen.main.bounds.width, height: 50)
+            return CGSize(width: UIScreen.main.bounds.width, height: 70)
 
         default:
             return CGSize(width: UIScreen.main.bounds.width, height: 100)

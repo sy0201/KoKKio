@@ -8,6 +8,8 @@
 import UIKit
 
 final class totalOrderCollectionViewCell: UICollectionViewCell, ReuseIdentifying {
+    let containerView = UIView()
+    
     let titleStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -94,9 +96,15 @@ final class totalOrderCollectionViewCell: UICollectionViewCell, ReuseIdentifying
 
 extension totalOrderCollectionViewCell {
     func setupUI() {
-        backgroundColor = .blue
+        containerView.backgroundColor = .white
+        containerView.layer.borderWidth = 1
+        containerView.layer.borderColor = CGColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 1.0)
+        containerView.layer.cornerRadius = 15
+        
+        addSubview(containerView)
         addSubview(titleStackView)
         addSubview(valueStackView)
+        
         titleStackView.addArrangedSubview(orderAmountTitle)
         titleStackView.addArrangedSubview(deliveryTipsTitle)
         titleStackView.addArrangedSubview(totalOrderAmountTitle)
@@ -106,16 +114,24 @@ extension totalOrderCollectionViewCell {
         valueStackView.addArrangedSubview(totalOrderAmount)
         
     }
+    
     // TODO: - 추후 여백 조정
     func setupConstraints() {
-        titleStackView.snp.makeConstraints { make in
+        containerView.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(16)
-            make.centerY.equalToSuperview()
+            make.trailing.equalToSuperview().offset(-16)
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        
+        titleStackView.snp.makeConstraints { make in
+            make.leading.equalTo(containerView.snp.leading).offset(16)
+            make.centerY.equalTo(containerView)
         }
         
         valueStackView.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().offset(-16)
-            make.centerY.equalToSuperview()
+            make.trailing.equalTo(containerView.snp.trailing).offset(-16)
+            make.centerY.equalTo(containerView)
         }
     }
 }
