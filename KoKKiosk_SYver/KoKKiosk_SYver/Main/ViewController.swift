@@ -30,6 +30,7 @@ final class ViewController: UIViewController {
         
         // 셀 연결
         mainView.collectionView.register(ChickenMenuCollectionViewCell.self, forCellWithReuseIdentifier: ChickenMenuCollectionViewCell.reuseIdentifier)
+        mainView.collectionView.register(ShoppingBasketCollectionViewCell.self, forCellWithReuseIdentifier: ShoppingBasketCollectionViewCell.reuseIdentifier)
     }
 }
 
@@ -37,7 +38,7 @@ final class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        1
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -58,15 +59,36 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChickenMenuCollectionViewCell.reuseIdentifier, for: indexPath) as? ChickenMenuCollectionViewCell else {
+        switch indexPath.row {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChickenMenuCollectionViewCell.reuseIdentifier, for: indexPath) as? ChickenMenuCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            
+            cell.updateMenuTypeCollectionView(menuType: currentMenuType)
+            
+            return cell
+            
+        case 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShoppingBasketCollectionViewCell.reuseIdentifier, for: indexPath) as? ShoppingBasketCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            
+            return cell
+            
+        default:
             return UICollectionViewCell()
         }
-        
-        cell.updateMenuTypeCollectionView(menuType: currentMenuType)
-        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: 200)
+        switch indexPath.row {
+        case 0:
+            return CGSize(width: UIScreen.main.bounds.width, height: 200)
+        case 1:
+            return CGSize(width: UIScreen.main.bounds.width, height: 200)
+        default:
+            return CGSize(width: UIScreen.main.bounds.width, height: 100)
+        }
     }
 }

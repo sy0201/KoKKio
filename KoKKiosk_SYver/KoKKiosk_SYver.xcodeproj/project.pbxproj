@@ -20,6 +20,8 @@
 		18E39F442CF59DD100EA4357 /* ChickenInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F432CF59DD100EA4357 /* ChickenInfoCollectionViewCell.swift */; };
 		18E39F472CF5ADCA00EA4357 /* ChickenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F462CF5ADCA00EA4357 /* ChickenModel.swift */; };
 		18E39F492CF5AE4600EA4357 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F482CF5AE4600EA4357 /* Enums.swift */; };
+		18E39F4B2CF6E1E400EA4357 /* ShoppingBasketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F4A2CF6E1E400EA4357 /* ShoppingBasketCollectionViewCell.swift */; };
+		18E39F4D2CF6E50800EA4357 /* SelectedOrderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F4C2CF6E50800EA4357 /* SelectedOrderListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		18E39F432CF59DD100EA4357 /* ChickenInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		18E39F462CF5ADCA00EA4357 /* ChickenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenModel.swift; sourceTree = "<group>"; };
 		18E39F482CF5AE4600EA4357 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		18E39F4A2CF6E1E400EA4357 /* ShoppingBasketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketCollectionViewCell.swift; sourceTree = "<group>"; };
+		18E39F4C2CF6E50800EA4357 /* SelectedOrderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedOrderListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				18E39F3D2CF56CD400EA4357 /* HeaderCollectionReusableView.swift */,
 				18E39F412CF5960E00EA4357 /* ChickenMenuCollectionViewCell.swift */,
 				18E39F432CF59DD100EA4357 /* ChickenInfoCollectionViewCell.swift */,
+				18E39F4A2CF6E1E400EA4357 /* ShoppingBasketCollectionViewCell.swift */,
+				18E39F4C2CF6E50800EA4357 /* SelectedOrderListTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -187,12 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E39F4B2CF6E1E400EA4357 /* ShoppingBasketCollectionViewCell.swift in Sources */,
 				18E39F262CF564BE00EA4357 /* ViewController.swift in Sources */,
 				18E39F402CF56DED00EA4357 /* ReuseIdentifying.swift in Sources */,
 				18E39F492CF5AE4600EA4357 /* Enums.swift in Sources */,
 				18E39F3B2CF56A0500EA4357 /* MainView.swift in Sources */,
 				18E39F222CF564BE00EA4357 /* AppDelegate.swift in Sources */,
 				18E39F3E2CF56CD400EA4357 /* HeaderCollectionReusableView.swift in Sources */,
+				18E39F4D2CF6E50800EA4357 /* SelectedOrderListTableViewCell.swift in Sources */,
 				18E39F242CF564BE00EA4357 /* SceneDelegate.swift in Sources */,
 				18E39F442CF59DD100EA4357 /* ChickenInfoCollectionViewCell.swift in Sources */,
 				18E39F472CF5ADCA00EA4357 /* ChickenModel.swift in Sources */,

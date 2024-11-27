@@ -46,14 +46,11 @@ final class ChickenMenuCollectionViewCell: UICollectionViewCell, ReuseIdentifyin
 
 private extension ChickenMenuCollectionViewCell {
     func setupUI() {
-        //collectionView.backgroundColor = .clear
         addSubview(collectionView)
     }
     
     func setupConstraint() {
         collectionView.snp.makeConstraints { make in
-            //make.leading.top.equalToSuperview().offset(20)
-            //make.trailing.bottom.equalToSuperview().offset(-20)
             make.edges.equalToSuperview()
         }
     }
