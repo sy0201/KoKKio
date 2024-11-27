@@ -31,6 +31,7 @@ final class ViewController: UIViewController {
         // 셀 연결
         mainView.collectionView.register(ChickenMenuCollectionViewCell.self, forCellWithReuseIdentifier: ChickenMenuCollectionViewCell.reuseIdentifier)
         mainView.collectionView.register(ShoppingBasketCollectionViewCell.self, forCellWithReuseIdentifier: ShoppingBasketCollectionViewCell.reuseIdentifier)
+        mainView.collectionView.register(totalOrderCollectionViewCell.self, forCellWithReuseIdentifier: totalOrderCollectionViewCell.reuseIdentifier)
     }
 }
 
@@ -38,7 +39,7 @@ final class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -76,6 +77,13 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
             
             return cell
             
+        case 2:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: totalOrderCollectionViewCell.reuseIdentifier, for: indexPath) as? totalOrderCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            
+            return cell
+            
         default:
             return UICollectionViewCell()
         }
@@ -87,6 +95,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
             return CGSize(width: UIScreen.main.bounds.width, height: 200)
         case 1:
             return CGSize(width: UIScreen.main.bounds.width, height: 200)
+            
+        case 2:
+            return CGSize(width: UIScreen.main.bounds.width, height: 50)
+
         default:
             return CGSize(width: UIScreen.main.bounds.width, height: 100)
         }

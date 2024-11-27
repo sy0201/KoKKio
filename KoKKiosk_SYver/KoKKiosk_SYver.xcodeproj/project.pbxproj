@@ -22,6 +22,7 @@
 		18E39F492CF5AE4600EA4357 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F482CF5AE4600EA4357 /* Enums.swift */; };
 		18E39F4B2CF6E1E400EA4357 /* ShoppingBasketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F4A2CF6E1E400EA4357 /* ShoppingBasketCollectionViewCell.swift */; };
 		18E39F4D2CF6E50800EA4357 /* SelectedOrderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F4C2CF6E50800EA4357 /* SelectedOrderListTableViewCell.swift */; };
+		18E39F502CF70CC200EA4357 /* totalOrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E39F4F2CF70CC200EA4357 /* totalOrderCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		18E39F482CF5AE4600EA4357 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		18E39F4A2CF6E1E400EA4357 /* ShoppingBasketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketCollectionViewCell.swift; sourceTree = "<group>"; };
 		18E39F4C2CF6E50800EA4357 /* SelectedOrderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedOrderListTableViewCell.swift; sourceTree = "<group>"; };
+		18E39F4F2CF70CC200EA4357 /* totalOrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalOrderCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				18E39F452CF5ADBB00EA4357 /* Model */,
 				18E39F3C2CF56BBA00EA4357 /* Cell */,
 				18E39F3A2CF56A0500EA4357 /* MainView.swift */,
+				18E39F4F2CF70CC200EA4357 /* totalOrderCollectionViewCell.swift */,
 				18E39F252CF564BE00EA4357 /* ViewController.swift */,
 			);
 			path = Main;
@@ -195,6 +198,7 @@
 			files = (
 				18E39F4B2CF6E1E400EA4357 /* ShoppingBasketCollectionViewCell.swift in Sources */,
 				18E39F262CF564BE00EA4357 /* ViewController.swift in Sources */,
+				18E39F502CF70CC200EA4357 /* totalOrderCollectionViewCell.swift in Sources */,
 				18E39F402CF56DED00EA4357 /* ReuseIdentifying.swift in Sources */,
 				18E39F492CF5AE4600EA4357 /* Enums.swift in Sources */,
 				18E39F3B2CF56A0500EA4357 /* MainView.swift in Sources */,
